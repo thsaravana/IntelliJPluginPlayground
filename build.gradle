@@ -22,6 +22,7 @@ compileTestKotlin {
 }
 intellij {
     version '2018.2'
+    plugins 'YAML'
 }
 patchPluginXml {
     changeNotes """

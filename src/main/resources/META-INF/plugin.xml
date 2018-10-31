@@ -8,11 +8,9 @@
     <em>most HTML tags may be used</em>
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
     <depends>com.intellij.modules.lang</depends>
-    -->
+    <depends>org.jetbrains.plugins.yaml</depends>
+
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -20,13 +18,16 @@
 
     <actions>
         <!-- Action for TextFinder. This action will be later replaced, hopefully. Currently, this is a FILLER . TODO: Implement toolwindow UI once POC is over -->
-        <action id="Runtime" class="ClassRuntime" text="Runtime"
+        <action id="Runtime" class="ClassRuntime" text="ClassLoader"
                 description="Class runtime"/>
+        <action id="YamlParse" class="FetchYaml" text="ParseYaml"
+                description="Parse Yaml"/>
 
-        <group id="bnpp.group.mainmenu" popup="true" text="MY"
+
+        <group id="my.group.mainmenu" popup="true" text="MY"
                description="Common Menu for all My plugins">
             <reference ref="Runtime"/>
-
+            <reference ref="YamlParse"/>
             <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
         </group>
     </actions>
