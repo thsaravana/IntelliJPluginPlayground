@@ -22,12 +22,14 @@
                 description="Class runtime"/>
         <action id="YamlParse" class="FetchYaml" text="ParseYaml"
                 description="Parse Yaml"/>
-
+        <action id="EnvVar" class="EnvironmentVariables" text="Environment Vars"
+                description="Environment Vars"/>
 
         <group id="my.group.mainmenu" popup="true" text="MY"
                description="Common Menu for all My plugins">
             <reference ref="Runtime"/>
             <reference ref="YamlParse"/>
+            <reference ref="EnvVar"/>
             <add-to-group group-id="MainMenu" anchor="before" relative-to-action="HelpMenu"/>
         </group>
     </actions>
